@@ -26,3 +26,27 @@ def writeData():
     fs.release()
 
 writeData()
+
+def readData():
+    fs = cv2.FileStorage(filename, cv2.FILE_STORAGE_READ)
+
+    if not fs.isOpened():
+        print('File open fail')
+        return
+    
+    name = fs.getNode('name').string()
+    age = int(fs.getNode('age').real())
+    pt1 = tuple(fs.getNode('point').mat().astype(np.int32).flatten())
+    scores = tuple(fs.getNode('scores').mat().flatten())
+    mat1 = fs.getNode('data').mat()
+
+    fs.release()
+
+    print('name:', name)
+    print('age:', age)
+    print('point:', pt1)
+    print('scores:', scores)
+    print('data:')
+    print(mat1)
+
+readData()
