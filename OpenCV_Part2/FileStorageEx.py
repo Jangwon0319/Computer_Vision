@@ -9,7 +9,7 @@ def writeData():
     age = 10
     pt1 = (100, 200)
     scores = (80, 90, 50)
-    mat1 = np.array([[1.0, 1,5], [2.0, 3.2]], dtype=np.float32)
+    mat1 = np.array([[1.0, 1.5], [2.0, 3.2]], dtype=np.float32)
 
     fs = cv2.FileStorage(filename, cv2.FILE_STORAGE_WRITE)
 
@@ -24,3 +24,5 @@ def writeData():
     fs.write('data', mat1)
 
     fs.release()
+
+writeData()
