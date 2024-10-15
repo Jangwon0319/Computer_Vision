@@ -12,7 +12,7 @@ def func3():
     cv.imshow('img1', img1)
     cv.imshow('img2', img2)
     cv.imshow('img3', img3)
-    cv.waitKey
+    cv.waitKey()
     cv.destroyAllWindows()
 
 func3()
