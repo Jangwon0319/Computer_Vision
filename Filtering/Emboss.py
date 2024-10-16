@@ -5,7 +5,7 @@ src = cv2.imread('rose.bmp', cv2.IMREAD_GRAYSCALE)
 
 if src is None:
     print('image load fail')
-    exit()
+    exit() 
 
 emboss = np.array([[-1, -1, 0],
                    [-1, 0, 1],
